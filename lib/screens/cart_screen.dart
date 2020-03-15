@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_complete_guide/providers/cart.dart' show Cart;
 import 'package:flutter_complete_guide/providers/orders.dart';
+import 'package:flutter_complete_guide/screens/orders_screen.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_complete_guide/widgets/cart_item.dart';
 
@@ -52,6 +53,7 @@ class CartScreen extends StatelessWidget {
                         cart.totalAmount,
                       );
                       cart.clear();
+                      Navigator.of(context).pushReplacementNamed(OrdersScreen.routeName);
                     },
                   )
                 ],
